@@ -1,6 +1,6 @@
 # PluxLogin
 
-> 高性能 Minecraft 登录注册插件 - 支持验证码/邮箱/QQ绑定/2FA/GUI/WebAPI | 兼容 1.7.10 ~ 1.26.1+
+> 高性能 Minecraft 登录注册插件 - 支持验证码/邮箱/QQ绑定/2FA/GUI/WebAPI | 兼容 1.7.10 ~ 26.1+
 
 ![Version](https://img.shields.io/badge/version-2.1.0-orange)
 ![Java](https://img.shields.io/badge/Java-8-blue)
