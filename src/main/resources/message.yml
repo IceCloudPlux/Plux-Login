@@ -1,0 +1,150 @@
+# ============================================================
+#  PluxLogin 消息配置 v2.1.0
+#  支持 & 颜色代码和 {变量} 占位符
+# ============================================================
+
+# 消息前缀
+prefix: "&6[&ePluxLogin&6] &r"
+
+# ========== 登录消息 ==========
+login:
+  need-login: "&c请使用 /login <密码> 登录服务器！"
+  success: "&a登录成功！欢迎回来！"
+  already-logged-in: "&c您已经登录了！"
+  not-registered: "&c您还没有注册，请先使用 /register 注册！"
+  wrong-password: "&c密码错误！剩余尝试次数: &e{remaining}"
+  max-wrong-kick: "&c密码错误次数过多，已被踢出！"
+  logout-success: "&a登出成功！"
+  title: "&c请登录..."
+  subtitle: "&7使用 /login <密码>"
+  actionbar: "&c[登录] 剩余时间: &e{time}s - &7/login <密码>"
+  success-title: "&a&l登录成功!"
+  success-subtitle: "&e欢迎回来, %player%!"
+
+# ========== 注册消息 ==========
+register:
+  need-register: "&e请使用 /register <密码> <重复密码> 注册账号！"
+  success: "&a注册成功！已自动登录！"
+  already-registered: "&c您已经注册过了，请使用 /login 登录！"
+  password-mismatch: "&c两次输入的密码不一致！"
+  too-short: "&c密码太短！最少需要 &e{min} &c个字符！"
+  too-long: "&c密码太长！最多允许 &e{max} &c个字符！"
+  invalid-pattern: "&c密码包含非法字符！"
+  need-captcha: "&c请先完成验证码验证！"
+  captcha-wrong: "&c验证码错误！"
+  title: "&e请注册..."
+  subtitle: "&7使用 /register <密码> <重复密码>"
+  actionbar: "&e[注册] 剩余时间: &e{time}s - &7/register <密码> <重复密码>"
+  success-title: "&a&l注册成功!"
+  success-subtitle: "&e欢迎, 新玩家!"
+  captcha-message: "&e您的验证码是: &6&l{captcha} &e- 请使用 /captcha {captcha}"
+
+# ========== 验证码消息 ==========
+captcha:
+  success: "&a验证码验证成功！"
+
+# ========== 邮箱消息 ==========
+email:
+  invalid: "&c邮箱格式不正确！"
+  already-bound: "&c您已经绑定过邮箱了！"
+  code-sent: "&a验证码已发送到您的邮箱，请查收！"
+  need-verify: "&e请使用 /mailc <验证码> 完成验证！"
+  cooldown: "&c操作过于频繁，请在 &e{seconds}s &c后重试！"
+  code-expired: "&c验证码已过期，请重新获取！"
+  code-wrong: "&c验证码错误！"
+  no-pending: "&c没有待处理的邮箱验证请求！"
+  bind-success: "&a邮箱绑定成功！"
+  bind-failed: "&c邮箱绑定失败！"
+  error: "&c邮件发送失败，请联系管理员！"
+
+# ========== QQ 消息 ==========
+qq:
+  invalid: "&cQQ号格式不正确！"
+  already-bound: "&c您已经绑定过QQ了！"
+  code-sent: "&a验证码已发送到您的QQ邮箱，请查收！"
+  need-verify: "&e请使用 /qqc <验证码> 完成验证！"
+  cooldown: "&c操作过于频繁，请在 &e{seconds}s &c后重试！"
+  code-expired: "&c验证码已过期，请重新获取！"
+  code-wrong: "&c验证码错误！"
+  no-pending: "&c没有待处理的QQ验证请求！"
+  bind-success: "&aQQ绑定成功！"
+  bind-failed: "&cQQ绑定失败！"
+
+# ========== 密码重置消息 ==========
+password-reset:
+  email-code-sent: "&a密码重置验证码已发送到您的邮箱！"
+  qq-code-sent: "&a密码重置验证码已发送到您的QQ邮箱！"
+  no-binding: "&c您还没有绑定{type}，无法重置密码！"
+  verify-prompt: "&e请输入新密码: /changepass <旧密码> <新密码>"
+
+# ========== 修改信息消息 ==========
+change-password:
+  wrong-old: "&c原密码错误！"
+  same: "&c新旧密码不能相同！"
+  success: "&a密码修改成功！"
+change-email:
+  wrong-old: "&c原邮箱错误！"
+  same: "&c新旧邮箱不能相同！"
+  code-sent: "&a验证码已发送到新邮箱！"
+change-qq:
+  wrong-old: "&c原QQ号错误！"
+  same: "&c新旧QQ号不能相同！"
+  code-sent: "&a验证码已发送到新QQ邮箱！"
+
+# ========== TOTP/2FA 消息 ==========
+totp:
+  usage: "&e用法: /2fa <on|off>"
+  enabled: "&a2FA 已启用！请扫描二维码绑定验证器！"
+  disabled: "&c2FA 已关闭！"
+  already-enabled: "&c您已经启用过2FA了！"
+  not-enabled: "&c您还没有启用2FA！"
+  qr-code: "&e二维码URL: &f{url}"
+  need-verify: "&e请使用 /2fac <验证码> 完成2FA验证！"
+  verify-success: "&a2FA验证成功！"
+  verify-failed: "&c2FA验证失败！"
+  usage-confirm: "&e用法: /2fac <验证码>"
+
+# ========== 错误消息 ==========
+error:
+  unknown: "&c发生未知错误，请联系管理员！"
+  player-only: "&c该命令只能由玩家执行！"
+  need-login-first: "&c请先登录后再执行此操作！"
+  no-permission: "&c您没有权限执行此命令！"
+  database-error: "&c数据库操作失败！"
+  email-error: "&c邮件服务异常！"
+  player-not-found: "&c未找到该玩家！"
+
+# ========== 全局消息 ==========
+global-cooldown: "&c操作过于频繁，请在 &e{seconds}s &c后重试！"
+
+# ========== 管理员消息 ==========
+admin:
+  regdel-success: "&a成功删除玩家 &e{player} &a的注册数据！"
+  regdel-failed: "&c删除失败，玩家可能不存在！"
+
+# ========== 主命令消息 ==========
+main-command:
+  reload-success: "&a配置重载成功！"
+  update-checking: "&e正在检查更新..."
+  update-check-complete: "&a更新检查完成！"
+  version: "&a当前版本: &e{version}"
+  help-header: "\n&e========== &6&lPluxLogin 帮助 &e=========="
+  help-footer: "\n&e====================================\n"
+
+# ========== 使用提示 ==========
+usage:
+  login: "&e用法: /login <密码>"
+  register: "&e用法: /register <密码> <重复密码>"
+  captcha: "&e用法: /captcha <验证码>"
+  mail: "&e用法: /mail <邮箱>"
+  mailc: "&e用法: /mailc <验证码>"
+  qq: "&e用法: /qq <QQ号>"
+  qqc: "&e用法: /qqc <验证码>"
+  changepass: "&e用法: /changepass <原密码> <新密码>"
+  changemail: "&e用法: /changemail <原邮箱> <新邮箱>"
+  changeqq: "&e用法: /changeqq <原QQ> <新QQ>"
+  regdel: "&e用法: /regdel <玩家名>"
+
+# ========== 反机器人消息 ==========
+anti-bot:
+  temp-ban-kick: "&c检测到异常行为，临时封禁 &e{seconds} &c秒！"

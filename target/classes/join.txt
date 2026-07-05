@@ -1,0 +1,22 @@
+# Join actions file - Executed when player joins the server (BEFORE login)
+# Support color codes: &0-&f, &k-&r
+# Use {player} for player name
+# Lines starting with # are comments
+#
+# Special commands:
+#   [TP] world x y z [yaw] [pitch]  - Teleport player to coordinates
+#   [DELAY] seconds                  - Delay subsequent actions (in seconds)
+#   [COMMAND] command                - Execute console command
+#     Example: [COMMAND] gamemode 3 {player}
+
+# Example: Set player to spectator mode and teleport to waiting area
+# [COMMAND] gamemode 3 {player}
+# [TP] world_lobby 0 64 0
+
+
+# Example: Send a message to the player before login
+&e正在验证您的身份，请稍候...
+
+# Example: Give a waiting item after 1 second delay
+# [DELAY] 1
+# [COMMAND] give {player} paper 1

@@ -1,0 +1,23 @@
+# Welcome message file
+# Support color codes: &0-&f, &k-&r
+# Use {player} for player name
+# Lines starting with # are comments
+#
+# Special commands:
+#   [TP] world x y z [yaw] [pitch]  - Teleport player to coordinates
+#   [DELAY] seconds                  - Delay subsequent actions (in seconds)
+#   [COMMAND] command                - Execute console command
+#     Example: [COMMAND] give {player} diamond 1
+
+&6========================================
+&e欢迎 &a{player} &e加入 Plux 服务器！
+&e玩家交流群: xxxxxxxxxx
+&6========================================
+
+# Example: Teleport player to spawn after 3 seconds
+[DELAY] 3
+[TP] world 100 60 100
+
+# Example: Give player items on first join
+# [DELAY] 1
+# [COMMAND] give {player} compass 1

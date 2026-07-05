@@ -1,0 +1,88 @@
+name: PluxLogin
+version: '2.1.0'
+main: com.plux.login.PluxLogin
+api-version: '1.13'
+author: aya_xzer21145
+description: 高性能登录注册插件 - 支持验证码/邮箱/QQ绑定/2FA/GUI/WebAPI | 兼容 1.7.10 ~ 26.1+
+folia-supported: true
+
+# 软依赖（缺失时自动降级，不影响插件加载）
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - ProtocolLib
+
+commands:
+  login:
+    description: 登录服务器
+    usage: /login <密码>
+    aliases: [l]
+  register:
+    description: 注册账号
+    usage: /register <密码> <重复密码>
+    aliases: [reg]
+  captcha:
+    description: 验证验证码
+    usage: /captcha <验证码>
+  mail:
+    description: 绑定邮箱
+    usage: /mail <邮箱>
+  mailc:
+    description: 验证邮箱绑定
+    usage: /mailc <验证码>
+  qq:
+    description: 绑定QQ号
+    usage: /qq <QQ号>
+  qqc:
+    description: 验证QQ绑定
+    usage: /qqc <验证码>
+  logout:
+    description: 登出服务器
+    usage: /logout
+  regdel:
+    description: 删除玩家注册数据(管理员)
+    usage: /regdel <玩家名>
+    permission: pluxlogin.admin
+  mailzhpass:
+    description: 通过邮箱重置密码
+    usage: /mailzhpass
+  qqzhpass:
+    description: 通过QQ重置密码
+    usage: /qqzhpass
+  changepass:
+    description: 修改密码
+    usage: /changepass <原密码> <新密码>
+    aliases: [cpss, changepassword]
+  changemail:
+    description: 修改邮箱
+    usage: /changemail <原邮箱> <新邮箱>
+    aliases: [cmail]
+  changeqq:
+    description: 修改QQ号
+    usage: /changeqq <原QQ> <新QQ>
+    aliases: [cq]
+  pluxlogin:
+    description: PluxLogin 主命令
+    usage: /pluxlogin <help|reload|update|version|gui>
+  2fa:
+    description: 管理双因素认证
+    usage: /2fa <on|off>
+  2fac:
+    description: 验证双因素认证
+    usage: /2fac <验证码>
+
+permissions:
+  pluxlogin.admin:
+    description: PluxLogin 管理员权限
+    default: op
+    children:
+      pluxlogin.gui: true
+  pluxlogin.bypass.captcha:
+    description: 跳过验证码验证
+    default: false
+  pluxlogin.bypass.force-email:
+    description: 跳过强制邮箱绑定
+    default: false
+  pluxlogin.gui:
+    description: 使用 GUI 管理界面
+    default: op

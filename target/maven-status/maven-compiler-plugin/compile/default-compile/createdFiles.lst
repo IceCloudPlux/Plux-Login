@@ -1,0 +1,15 @@
+com\plux\login\ConfigManager$1.class
+com\plux\login\DatabaseManager.class
+com\plux\login\PluxLogin$PasswordResetVerification.class
+com\plux\login\PluxLogin$PlayerSession.class
+com\plux\login\TOTPManager.class
+com\plux\login\EmailManager.class
+com\plux\login\PluxLogin$SessionState.class
+com\plux\login\ConfigManager.class
+com\plux\login\EmailManager$1.class
+com\plux\login\PluxLogin$PendingBinding.class
+com\plux\login\CaptchaManager.class
+com\plux\login\InventoryGui.class
+com\plux\login\PlayerListener$1.class
+com\plux\login\PlayerListener.class
+com\plux\login\PluxLogin.class

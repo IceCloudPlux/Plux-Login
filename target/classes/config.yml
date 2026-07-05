@@ -1,0 +1,120 @@
+# ============================================================
+#  PluxLogin 配置文件 v2.1.0
+#  文档: https://docs.pluxlogin.com
+#  QQ群: xxxxxxxx
+# ============================================================
+
+# 数据库配置
+database:
+  type: sqlite          # sqlite 或 mysql
+  mysql:
+    host: localhost
+    port: 3306
+    database: pluxlogin
+    username: root
+    password: ""
+    # HikariCP 连接池配置
+    pool-size: 10
+    min-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+# 验证码设置
+captcha:
+  enabled: true         # 是否启用验证码
+  length: 4             # 验证码长度 (4-8)
+  alpha-numeric: false   # 是否启用字母数字混合验证码
+  timeout: 120          # 验证码超时时间（秒）
+
+# 登录/注册超时设置
+timeouts:
+  login: 300            # 登录超时时间（秒）
+  register: 300         # 注册超时时间（秒）
+
+# 密码规则
+password:
+  min-length: 6         # 最小密码长度
+  max-length: 32        # 最大密码长度
+  pattern: "^[a-zA-Z0-9_!@#$%^&*]+$"  # 允许的字符
+
+# 安全设置
+security:
+  max-wrong-password: 5     # 最大错误密码次数
+  max-kick-count: 3         # 最大踢出次数后执行命令
+  kick-command: "ban %player% 踢出次数过多"
+  global-cooldown: 3        # 全局冷却时间（秒）
+  action-cooldown: 5        # 操作冷却时间（秒）
+
+# 反机器人设置
+anti-bot:
+  enabled: true             # 是否启用反机器人
+  min-interval: 5000        # 最小重入间隔（毫秒）
+  max-fast-joins: 3         # 最大快速加入次数
+  temp-ban-duration: 300    # 临时封禁时长（秒）
+
+# 强制绑定邮箱（新功能 v2.1.0）
+force-email:
+  enabled: false            # 是否强制未绑定邮箱的玩家在登录后立即绑定
+  timeout: 120              # 绑定超时时间（秒），超时则踢出
+
+# GUI 管理界面（新功能 v2.1.0）
+gui:
+  enabled: false            # 是否启用 GUI 管理界面 (/pluxlogin gui)
+
+# Web API 接口（新功能 v2.1.0）
+web-api:
+  enabled: false            # 是否启用 Web API
+  port: 8701                # API 监听端口
+  secret: "change-me-to-a-secure-secret-key"  # API 密钥（必须修改！）
+
+# Title / ActionBar 提示
+display:
+  title:
+    enabled: true           # 是否启用 Title 提示
+    interval: 3             # 刷新间隔（秒）
+  actionbar:
+    enabled: true           # 是否启用 ActionBar 提示
+    interval: 1             # 刷新间隔（秒）
+
+# 欢迎动作（登录成功后执行）
+welcome-actions:
+  - "[title] &a&l登录成功!"
+  - "[actionbar] &e欢迎回来, %player%!"
+
+# 未登录允许使用的命令
+allowed-commands:
+  - login
+  - l
+  - register
+  - reg
+  - captcha
+  - mail
+  - mailc
+  - qq
+  - qqc
+  - pluxlogin
+  - 2fa
+  - 2fac
+
+# 邮箱服务配置
+email:
+  enabled: false            # 是否启用邮箱功能
+  host: smtp.qq.com         # SMTP 服务器地址
+  port: 465                 # SMTP 端口
+  username: ""              # SMTP 用户名
+  password: ""              # SMTP 密码/授权码
+  from: ""                  # 发件人地址
+  cooldown: 60              # 发送冷却时间（秒）
+  code-validity: 300        # 验证码有效期（秒）
+
+# QQ 绑定配置
+qq:
+  enabled: false            # 是否启用 QQ 绑定
+  email-domain: qq.com      # QQ 邮箱域名
+  cooldown: 60              # 发送冷却时间（秒）
+  code-validity: 300        # 验证码有效期（秒）
+
+# TOTP/2FA 配置
+totp:
+  issuer: PluxLogin         # TOTP 发行者名称
